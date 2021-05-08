@@ -8,7 +8,9 @@ Node & npm
 
 # Starting the app
 
-`npm start` command will the application in http://localhost:3000
+- `git clone https://github.com/ashikd/hex-color-input.git` to get the repo into local
+- `cd hex-color-input && npm install` command installs the necessary packages
+- `npm start` command will the application in http://localhost:3000
 
 # Functionalities
 
