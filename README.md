@@ -9,3 +9,21 @@ Node & npm
 # Starting the app
 
 `npm start` command will the application in http://localhost:3000
+
+# Functionalities
+
+1) 'master' branch does the necessary requirments:
+
+    - takes input values of the color hex codes separated by space or semi-colon.
+
+    - parses and creates link of the valid hex codes entered.
+
+    - removes invalid codes and displays warning message of the removed values.
+
+    - onClick of the links created launches modal window with the message and value selected.
+
+2) 'show-color-picker' branch does the optional requirement:
+
+      - onclick of the hexcode link opens the default color picker of the browser
+
+      - on changing values of the hex code from the color picker updates the selected input value
