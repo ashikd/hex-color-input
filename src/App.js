@@ -48,6 +48,7 @@ function App() {
       }
     });
     setLinkObjs([...linkValues])
+    setInputVal(linkObjs.toString().replace(/,/g, ';'))
   }
 
   useEffect(() => {
