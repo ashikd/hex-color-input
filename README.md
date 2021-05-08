@@ -26,6 +26,8 @@ Node & npm
 
 2) 'show-color-picker' branch does the optional requirement:
 
-      - onclick of the hexcode link opens the default color picker of the browser
+      - `git checkout show-color-picker && npm start` will run this functionality.
 
-      - on changing values of the hex code from the color picker updates the selected input value
+      - onclick of the hexcode link opens the default color picker of the browser.
+
+      - on changing values of the hex code from the color picker updates the selected input value.
