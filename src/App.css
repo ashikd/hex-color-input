@@ -1,0 +1,70 @@
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 16px;
+}
+.inputLabel{
+  color: #db1f26;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.inputBox{
+  border: 1px solid #6c757d;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  line-height: 40px;
+  margin: 10px 0;
+  padding: 2px 5px;
+  width: 100%;
+  text-align: left;
+  overflow-x: auto;
+  height: 48px;
+}
+
+.inputBox:focus{
+  box-shadow:0 0 0 0.2rem rgb(63, 169, 245, 25%);
+  outline: 0;
+}
+
+.modalContentWrapper{
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modalCloseButton{
+  border: 0;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.warningMessage {
+  color: #17a2b8;
+  font-weight: bold;
+  font-size: 14px;
+}
+.linkBlock{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
+.hiddenInput{
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
