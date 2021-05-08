@@ -28,8 +28,6 @@ function App() {
   }
 
   const onFocusOutHandler = () => {
-    // const validInputCheck = /^#[A-Fa-f0-9]+(\s;)/;
-    // const isValid = validInputCheck.test(inputVal);
     setToggle(false);
     parseInput();
   }
@@ -43,15 +41,13 @@ function App() {
   }
 
   const colorChange = (e, val) => {
-    console.log(e.target.value)
     const linkValues = linkObjs;
     linkValues.forEach((item, index) => {
       if(val === item) {
         linkValues[index] = e.target.value;
       }
     });
-    console.log(linkValues)
-    setLinkObjs(linkValues)
+    setLinkObjs([...linkValues])
   }
 
   useEffect(() => {
