@@ -8,7 +8,9 @@ Node & npm
 
 # Starting the app
 
-`npm start` command will the application in http://localhost:3000
+- `git clone https://github.com/ashikd/hex-color-input.git` to get the repo into local
+- `cd hex-color-input && npm install` command installs the necessary packages
+- `npm start` command will the application in http://localhost:3000
 
 # Functionalities
 
@@ -24,6 +26,8 @@ Node & npm
 
 2) 'show-color-picker' branch does the optional requirement:
 
-      - onclick of the hexcode link opens the default color picker of the browser
+      - `git checkout show-color-picker && npm start` will run this functionality.
 
-      - on changing values of the hex code from the color picker updates the selected input value
+      - onclick of the hexcode link opens the default color picker of the browser.
+
+      - on changing values of the hex code from the color picker updates the selected input value.
