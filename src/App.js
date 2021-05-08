@@ -58,7 +58,7 @@ function App() {
 
   return (
     <div className="App">
-      <label className="inputLabel" for="hexInputBox">Enter Hex Color values:</label>
+      <label className="inputLabel" htmlFor="hexInputBox">Enter Hex Color values:</label>
       {
         toggle ?
         <>
@@ -70,12 +70,12 @@ function App() {
             onBlur={onFocusOutHandler}
             value={inputVal}
             className="inputBox"
-            autocomplete="off"
+            autoComplete="off"
           />
         </>
         :
         <div onClick={onClickHandler} className="inputBox">
-          {linkObjs.map(val => <span>
+          {linkObjs.map((val,index) => <span key={`${index}-${val}`}>
             <a href="#" onClick={(e)=>showMessage(e, val)}>{val}</a>&nbsp;
           </span>)}
         </div>
@@ -87,7 +87,7 @@ function App() {
       }
       <Modal
         isOpen={modalData.isOpen}
-        // onAfterOpen={afterOpenModal}
+        ariaHideApp={false}
         onRequestClose={closeModal}
         style={customStyles}
       >
