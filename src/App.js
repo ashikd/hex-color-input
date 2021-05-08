@@ -8,13 +8,12 @@ function App() {
   const [warningData, toggleWarning] = useState({showWarning: false, invalidVals: []});
   const [linkObjs, setLinkObjs] = useState([]);
   const [ modalData, setModalData ] = useState({isOpen: false, displayVal: ""});
-  // function openModal(){
-  //   setIsOpen({isOpen: true, displayVal: ""});
-  // }
+
+  const textInput = useRef();
+
   function closeModal(){
     setModalData({isOpen: false, displayVal: ""});
   }
-  const textInput = useRef();
 
   const onChangeHandler = (e) => {
     setInputVal(e.target.value)
@@ -42,29 +41,15 @@ function App() {
   }
 
   const onClickHandler = (e) => {
+    e.preventDefault();
     if(e.target === e.currentTarget){
       setToggle(true);
-    }else{
-      colorChange(e)
     }
   }
 
   const showMessage = (e,val) => {
-    // e.preventDefault();
-    // setModalData({isOpen: true, displayVal: val});
-
-  }
-
-  const colorChange = (e, val) => {
-    console.log(e.target.value)
-    const linkValues = linkObjs;
-    linkValues.forEach((item, index) => {
-      if(val === item) {
-        linkValues[index] = e.target.value;
-      }
-    });
-    console.log(linkValues)
-    setLinkObjs(linkValues)
+    e.preventDefault();
+    setModalData({isOpen: true, displayVal: val});
   }
 
   useEffect(() => {
@@ -90,15 +75,9 @@ function App() {
         </>
         :
         <div onClick={onClickHandler} className="inputBox">
-          {linkObjs.map((val, index) => <div key={`${val}${index}`} className="linkBlock">
-              {val}
-              <input
-                type="color"
-                className="hiddenInput"
-                onChange={(e)=>colorChange(e, val)}
-                value={val}
-              />&nbsp;
-          </div>)}
+          {linkObjs.map(val => <span>
+            <a href="#" onClick={(e)=>showMessage(e, val)}>{val}</a>&nbsp;
+          </span>)}
         </div>
       }
       { warningData.showWarning &&
